@@ -1,0 +1,13 @@
+Oggetto: Proposta progetto Architettura Dati – Database NoSQL e gestione log distribuita
+
+Buongiorno Professore,
+
+vorrei sviluppare un progetto basato su Cassandra per l’archiviazione e la gestione scalabile di log applicativi in un contesto distribuito. L’idea è creare un sistema che simuli il flusso di log da più servizi, immagazzinando ed elaborando i dati in un database Cassandra.
+
+Testerò il sistema simulando l’arrivo continuo di log tramite script e analizzerò aspetti come scalabilità, replica e fault tolerance.
+
+Resto in attesa di un Suo parere.
+
+Cordiali saluti,
+Lorenzo Colombo.
+mat. 885895

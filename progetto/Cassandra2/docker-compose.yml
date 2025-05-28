@@ -1,0 +1,14 @@
+version: '3'
+services:
+  cassandra2:
+    image: cassandra:4.1
+    container_name: cassandra2
+    network_mode: "host"
+    environment:
+      - CASSANDRA_SEEDS=10.0.1.4
+      - CASSANDRA_LISTEN_ADDRESS=10.0.1.5
+      - CASSANDRA_BROADCAST_ADDRESS=10.0.1.5
+      - CASSANDRA_BROADCAST_RPC_ADDRESS=10.0.1.5
+      - CASSANDRA_ENDPOINT_SNITCH=GossipingPropertyFileSnitch
+    volumes:
+      - ./data-node2:/var/lib/cassandra

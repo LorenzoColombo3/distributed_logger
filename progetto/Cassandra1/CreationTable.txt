@@ -1,0 +1,17 @@
+-- Crea il keyspace se non esiste
+CREATE KEYSPACE IF NOT EXISTS log_keyspace WITH replication = {
+	'class': 'SimpleStrategy', 
+	'replication_factor': 3
+};
+
+-- Usa il keyspace
+USE logs;
+
+-- Crea la tabella se non esiste
+CREATE TABLE IF NOT EXISTS logs (
+    id UUID PRIMARY KEY,
+    service text,
+    level text,
+    message text,
+    timestamp timestamp
+);

@@ -1,0 +1,15 @@
+version: '3'
+services:
+  cassandra3:
+    image: cassandra:4.1
+    container_name: cassandra3
+    network_mode: "host"
+    environment:
+      - CASSANDRA_SEEDS=10.0.1.4
+      - CASSANDRA_LISTEN_ADDRESS=10.0.1.6
+      - CASSANDRA_BROADCAST_ADDRESS=10.0.1.6
+      - CASSANDRA_BROADCAST_RPC_ADDRESS=10.0.1.6
+      - CASSANDRA_ENDPOINT_SNITCH=GossipingPropertyFileSnitch
+      - JVM_EXTRA_OPTS=-Dcom.sun.management.jmxremote.port=7200
+    volumes:
+      - ./data-node4:/var/lib/cassandra
